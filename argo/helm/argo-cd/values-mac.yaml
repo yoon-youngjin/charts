@@ -13,4 +13,5 @@ global:
     - github.com
 repoServer:
   containerSecurityContext:
-    runAsNonRoot: false
+    runAsUser: 0
+    runAsGroup: 0
