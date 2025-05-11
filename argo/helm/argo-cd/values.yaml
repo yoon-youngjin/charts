@@ -620,7 +620,7 @@ controller:
   imagePullSecrets: []
 
   # -- DEPRECATED - Application controller commandline flags
-  args: {}
+  args:
   # DEPRECATED - Use configs.params to override
   #  # -- define the application controller `--status-processors`
   #  statusProcessors: "20"
@@ -633,7 +633,7 @@ controller:
   #  # -- define the application controller `--self-heal-timeout-seconds`
   #  selfHealTimeout: "5"
   #  # -- define the application controller `--repo-server-timeout-seconds`
-  #  repoServerTimeoutSeconds: "60"
+    repoServerTimeoutSeconds: "120"
 
   # -- Additional command line arguments to pass to application controller
   extraArgs: []
