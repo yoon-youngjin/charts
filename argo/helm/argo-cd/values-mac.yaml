@@ -12,6 +12,15 @@ global:
     hostnames:
     - github.com
 repoServer:
+  initContainers:
+    - name: install-ping-curl
+      image: ubuntu:22.04  # 사용하고자 하는 베이스 이미지
+      command:
+        - "/bin/sh"
+        - "-c"
+        - "apt-get update && apt-get install -y iputils-ping curl"  # ping과 curl 설치 명령
+      securityContext:
+        runAsUser: 0  # root 권한으로 실행 (필요 시)
   containerSecurityContext:
     runAsUser: 0
     runAsGroup: 0
