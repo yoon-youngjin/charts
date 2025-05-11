@@ -11,3 +11,6 @@ global:
   - ip: 20.200.245.247
     hostnames:
     - github.com
+repoServer:
+  containerSecurityContext:
+    runAsNonRoot: false
